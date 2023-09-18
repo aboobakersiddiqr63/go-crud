@@ -108,11 +108,7 @@ func createtask(task todo.ToDoList) string {
 }
 
 func getAllTasks() []primitive.M {
-	fmt.Println("debug error four")
-
 	result, err := collection.Find(context.Background(), bson.D{{}})
-	fmt.Println("debug error five")
-
 	helper.HandleException(err, "getAllTasks")
 
 	var response []primitive.M

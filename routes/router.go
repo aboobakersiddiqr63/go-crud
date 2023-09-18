@@ -1,16 +1,12 @@
 package router
 
 import (
-	"fmt"
-
 	todo_handler "github.com/aboobakersiddiqr63/go-crud/handlers"
 	"github.com/gorilla/mux"
 )
 
 func Router() *mux.Router {
 	router := mux.NewRouter()
-	fmt.Println("debug error two")
-
 	router.HandleFunc("/api/tasks", todo_handler.GetAllTasks).Methods("GET", "OPTIONS")
 	router.HandleFunc("/api/task", todo_handler.Createtask).Methods("POST", "OPTIONS")
 	router.HandleFunc("/api/task/{id}", todo_handler.TaskComplete).Methods("PUT", "OPTIONS")

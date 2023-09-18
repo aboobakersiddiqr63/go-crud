@@ -14,7 +14,6 @@ func main() {
 
 	r := router.Router()
 	fmt.Println("Starting the server on port 4000")
-	fmt.Println("debug error one")
 
 	log.Fatal(http.ListenAndServe(":4000", r))
 }
